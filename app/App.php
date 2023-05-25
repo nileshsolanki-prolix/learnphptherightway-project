@@ -37,7 +37,8 @@ class App
 
     public function boot(): static
     {
-        $dotenv = Dotenv::createImmutable(__DIR__ . '/../');
+        var_dump(dirname(__DIR__));exit;
+        $dotenv = Dotenv::createImmutable(dirname(__DIR__));
         $dotenv->load();
 
         $this->config = new Config($_ENV);
