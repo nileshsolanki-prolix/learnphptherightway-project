@@ -37,7 +37,6 @@ class App
 
     public function boot(): static
     {
-        var_dump(dirname(__DIR__));exit;
         $dotenv = Dotenv::createImmutable(dirname(__DIR__));
         $dotenv->load();
 
